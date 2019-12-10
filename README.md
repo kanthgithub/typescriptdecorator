@@ -37,6 +37,23 @@ class RamenWithPork extends Ramen {
 
 This worked until she decided to expand the topping menu and it became too cumbersome to deal combinatorial amount of classes. How should she fix it?
 
+### Design Flaw:
+
+Decorator Pattern is a correct approach, but here in this case, for each Decoration, a new class is created
+This results in thousands of classes or a class for each combination of Toppings
+
+### Alternative:
+
+1. Stick to Decorator-Pattern
+2. Instead of creating a brand-new class for various decorations of main-item,
+Create a Factory or AbstractCreator for Decorations, which take BaseClass as constructor argument
+3. Each Decoration is equivalent to having a Class
+3. This results in keeping a limit for maximum number of classes
+4. Main-Menu-Item or BaseItem is decorated by Topping using ToppingCreator
+
+ - Math: 
+    - Assume <b>n</b> is the total number of Toppings
+    - Then, <b>factorial(n)</b> ways of Topping Combination of Main-Menu-Item is possible
 
 ### Solution:
 
