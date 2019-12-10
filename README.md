@@ -111,11 +111,11 @@ Step-1:
 
  #### Abstract Class for Decorator:
 
- - Name: AbstractToppingCreator
- - Inheritance: implements ToppingCreator
- - Constructor: Calls Super-Class's Constructor. In this Scenario, Super Class is HashPrice
-   - Constructor part will set the parent 
-- Inheritance details: ToppingCreator extends HashPrice
+  - Name: AbstractToppingCreator
+  - Inheritance: implements ToppingCreator
+  - Constructor: Calls Super-Class's Constructor. In this Scenario, Super Class is HashPrice
+    - Constructor part will set the parent 
+  - Inheritance details: ToppingCreator extends HashPrice
 
     ```js
     interface AbstractToppingCreator implements ToppingCreator {
@@ -129,3 +129,53 @@ Step-1:
      }
     ```
 
+#### Topping Classes inheriting ToppingCreator:
+
+- All Toppings will have their specific classes defined 
+- Topping will inherit the behavior defined in AbstractToppingCreator
+
+- Example:
+
+   1. Topping-1:
+       - ToppingName: WithPork
+       - Topping will override the getPrice method of Base-Menu-Item
+       - In the below scenario, base will change dynamically
+       - If base is Spagetti, then after decoration with Pork makes base as Spagetti WithPork
+
+   2. Topping-2:
+      - ToppingName: WithPaneer
+      - Topping will override the getPrice method of Base-Menu-Item
+      - If base is Spagetti, then after decoration with Paneer makes base as Spagetti WithPaneer
+
+
+    3. If Customer needs Pork as well as Paneer, then decoration happens in sequence as mentioned below:
+     - If item decorated above is decorated again with Paneer, then it makes the previous Item as   WithPork And WithPanner
+
+      ```js
+        class WithPork extends AbstractToppingCreator {
+          getPrice() {
+            return this.base.getPrice() + 5
+          }
+        } 
+      ```
+
+      ```js
+       class WithPaneer extends AbstractToppingCreator {
+          getPrice() {
+           return this.base.getPrice() + 12
+         }
+       } 
+      ```
+
+    4. usage of Topping With ToppingCreator:
+
+       ```js
+          let foodOrder: MainDish = new Ramen();
+          foodOrder = new WithPork(foodOrder);
+          foodOrder = new WithPaneer(foodOrder);
+       ```
+
+       - Here foodOrder is a Main-Item to start with
+       - In the subsequent steps, same base-Instance is decorated with multiple Toppings
+       - foodOrder in line-174, shows foodOrder decorated by Pork using WithPork ()
+      
