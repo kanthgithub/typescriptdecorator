@@ -1,3 +1,5 @@
+import AbstractToppingCreator from "./AbstractToppingCreator";
+import HasPrice from "./HasPrice";
 class WithPaneer extends AbstractToppingCreator {
 
     getPrice(): number {
@@ -5,3 +7,5 @@ class WithPaneer extends AbstractToppingCreator {
     }
     
 }
+
+export = WithPaneer;
