@@ -1,0 +1,3 @@
+interface ToppingCreator extends HasPrice {
+
+}

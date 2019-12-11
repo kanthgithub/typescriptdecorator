@@ -93,7 +93,6 @@ Create a Factory or AbstractCreator for Decorations, which take BaseClass as con
    }
   ```
 
-
 Step-1: 
 
  1. Define an Interface for Flavour-Decorator
@@ -148,7 +147,7 @@ Step-1:
       - If base is Spagetti, then after decoration with Paneer makes base as Spagetti WithPaneer
 
 
-    3. If Customer needs Pork as well as Paneer, then decoration happens in sequence as mentioned below:
+    3. If Customer needs Chicken as well as Paneer, then decoration happens in sequence as mentioned below:
      - If item decorated above is decorated again with Paneer, then it makes the previous Item as   WithPork And WithPanner
 
       ```js
@@ -167,15 +166,31 @@ Step-1:
        } 
       ```
 
+      ```js
+      class WithMushroom extends AbstractToppingCreator {
+          getPrice() {
+           return this.base.getPrice() + 20
+         }
+       } 
+      ```
+
     4. usage of Topping With ToppingCreator:
 
        ```js
-          let foodOrder: MainDish = new Ramen();
+          let foodOrder: HasPrice = new Ramen();
           foodOrder = new WithPork(foodOrder);
           foodOrder = new WithPaneer(foodOrder);
        ```
 
        - Here foodOrder is a Main-Item to start with
        - In the subsequent steps, same base-Instance is decorated with multiple Toppings
-       - foodOrder in line-174, shows foodOrder decorated by Pork using WithPork ()
+       - foodOrder in line-173, shows foodOrder decorated by Pork using WithPork ()
+       - foodOrder in line-174, shows foodOrder decorated by Panner using WithPaneer ()
+          - After this topping, Ramen has 2 toppings : Pork and Paneer
+
+    5. Conclusion: 
+       - Decorator is used to limit the number of classes
+       - Objects with different toppings are generated run-time
+
+
       
