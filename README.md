@@ -232,6 +232,16 @@ console.log(`total price of Spaghetti with Mushroom, Paneer and Pork Topping is:
 
 ## Allergens to Toppings:
 
+### Question:
+
+```
+follow up question: With all the choices, customers have started asking whether or not their choice of ingredients contains certain allergens.
+
+Alice would prefer not to have to add a million methods to all her classes to specify true/false for each allergen. How can she add this check without having to add one function per allergen for each ingredient?
+```
+
+### Answer:
+
 
 
 
