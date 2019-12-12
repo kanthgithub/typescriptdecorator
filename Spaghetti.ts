@@ -1,4 +1,4 @@
-import HasPrice from './HasPrice';
+import {HasPrice} from './HasPrice';
 
 class Spaghetti implements HasPrice {
     getPrice() {
@@ -6,4 +6,4 @@ class Spaghetti implements HasPrice {
     }
   }
 
- export = Spaghetti; 
+ export {Spaghetti}; 

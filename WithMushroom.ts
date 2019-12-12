@@ -1,5 +1,5 @@
-import AbstractToppingCreator from "./AbstractToppingCreator";
-import HasPrice from "./HasPrice";
+import {AbstractToppingCreator} from "./AbstractToppingCreator";
+import {HasPrice} from "./HasPrice";
 
 class WithMushroom extends AbstractToppingCreator {
     getPrice(): number {
@@ -7,4 +7,4 @@ class WithMushroom extends AbstractToppingCreator {
     }
 }
 
-export = WithMushroom;
+export  {WithMushroom as WithMushroom};

@@ -1,7 +1,7 @@
-import HasPrice from './HasPrice';
+import {HasPrice} from './HasPrice';
 
 interface ToppingCreator extends HasPrice {
 
 }
 
-export = ToppingCreator;
+export {ToppingCreator as ToppingCreator }

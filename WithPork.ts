@@ -1,5 +1,5 @@
-import AbstractToppingCreator from "./AbstractToppingCreator";
-import HasPrice from "./HasPrice";
+import {AbstractToppingCreator} from "./AbstractToppingCreator";
+import {HasPrice} from "./HasPrice";
 
 class WithPork extends AbstractToppingCreator {
 
@@ -8,4 +8,4 @@ class WithPork extends AbstractToppingCreator {
     }
 }
 
-export = WithPork;
+export { WithPork };

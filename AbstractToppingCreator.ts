@@ -1,5 +1,5 @@
-import ToppingCreator from './ToppingCreator';
-import HasPrice from './HasPrice';
+import {ToppingCreator} from './ToppingCreator';
+import {HasPrice} from './HasPrice';
 
 abstract class AbstractToppingCreator implements ToppingCreator {
     protected base : HasPrice
@@ -11,4 +11,4 @@ abstract class AbstractToppingCreator implements ToppingCreator {
    abstract getPrice(): number;
 }
 
-export = AbstractToppingCreator;
+export {AbstractToppingCreator};

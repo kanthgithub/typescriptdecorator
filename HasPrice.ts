@@ -1,5 +1,3 @@
-interface HasPrice {
+export interface HasPrice {
     getPrice(): number;
   }
-
-export = HasPrice;
