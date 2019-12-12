@@ -150,37 +150,37 @@ Step-1:
     3. If Customer needs Chicken as well as Paneer, then decoration happens in sequence as mentioned below:
      - If item decorated above is decorated again with Paneer, then it makes the previous Item as   WithPork And WithPanner
 
-      ```js
+```js
         class WithPork extends AbstractToppingCreator {
           getPrice() {
             return this.base.getPrice() + 5
           }
         } 
-      ```
+```
 
-      ```js
+```js
        class WithPaneer extends AbstractToppingCreator {
           getPrice() {
            return this.base.getPrice() + 12
          }
        } 
-      ```
+ ```
 
-      ```js
+```js
       class WithMushroom extends AbstractToppingCreator {
           getPrice() {
            return this.base.getPrice() + 20
          }
        } 
-      ```
+```
 
     4. usage of Topping With ToppingCreator:
 
-       ```js
+```js
           let foodOrder: HasPrice = new Ramen();
           foodOrder = new WithPork(foodOrder);
           foodOrder = new WithPaneer(foodOrder);
-       ```
+```
 
        - Here foodOrder is a Main-Item to start with
        - In the subsequent steps, same base-Instance is decorated with multiple Toppings
