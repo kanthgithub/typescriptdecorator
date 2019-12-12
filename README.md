@@ -174,7 +174,7 @@ Step-1:
        } 
 ```
 
-    4. usage of Topping With ToppingCreator:
+### usage of Topping With ToppingCreator:
 
 ```js
           let foodOrder: HasPrice = new Ramen();
