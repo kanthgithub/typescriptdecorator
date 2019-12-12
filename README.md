@@ -193,4 +193,26 @@ Step-1:
        - Objects with different toppings are generated run-time
 
 
-      
+ ## How to Run:
+
+  - index.ts contains Ramen and Spaghetti Orders with toppings created on top of base
+  - feel free to change the code in index.ts to add more toppings or remove toppings
+
+  ```js
+  lakshmikanth-MacBook-Pro:typeScriptDecorator lakshmikanth$ tsc index.ts
+  lakshmikanth-MacBook-Pro:typeScriptDecorator lakshmikanth$ node index.js
+  ```
+
+  - Output should be:
+
+   ```
+   total price of Ramen with Mushroom, Paneer and Pork Topping is: 42
+   total price of Spaghetti with Mushroom, Paneer and Pork Topping is: 47
+   ```
+
+## Allergens to Toppings:
+
+
+
+
+
